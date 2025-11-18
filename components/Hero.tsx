@@ -18,7 +18,10 @@ export default function Hero() {
             {hero.ctaPrimary}
           </Link>
           <p className="text-sm text-neutral-500 mt-6">
-            Not sure where to start? <Link href="/portfolio" className="text-primary-600 hover:text-primary-700 font-medium">See past work</Link> or <Link href="/intake" className="text-primary-600 hover:text-primary-700 font-medium">tell me what's stuck</Link>
+            Not sure what you need? That&apos;s okay—let&apos;s figure it out together.
+          </p>
+          <p className="text-sm text-neutral-500 mt-2">
+            <Link href="/portfolio" className="text-primary-600 hover:text-primary-700 font-medium">See past work</Link> or <Link href="/intake" className="text-primary-600 hover:text-primary-700 font-medium">fill out quick form</Link>
           </p>
         </div>
       </div>

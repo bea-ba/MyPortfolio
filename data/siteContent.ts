@@ -35,7 +35,7 @@ export const siteContent = {
       {
         name: "Quick Clarity",
         subtitle: "Fix a specific bottleneck",
-        description: "You have something blocking you RIGHT NOW. Let's fix it so you can get back to what you love.",
+        description: "You have something blocking you RIGHT NOW. Let's fix it so you can get back to what you love. Small fixes stay small—no scope creep, no pressure.",
         ideal: "You know exactly what's stuck and need it resolved quickly",
         examples: [
           "Workflow automation that saves hours",
