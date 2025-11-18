@@ -15,14 +15,14 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '2',
-    clientType: "Yoga Studio Owner",
-    problem: "Manually copying class bookings from website to calendar every day",
-    solution: "Connected booking system directly to Google Calendar",
-    relief: "My mornings are mine again!",
-    timeTaken: "3-hour solution",
-    toolsUsed: ["Zapier", "Google Calendar API", "Booking platform"],
+    clientType: "Sofia's Yoga Studio",
+    problem: "Started with: Manually copying bookings took 2 hours every morning. Later discovered: Her whole client management system was held together by spreadsheets and memory.",
+    solution: "First: Automated the booking-to-calendar sync (3 hours). Then: Over coffee, Sofia shared her bigger vision. We spent 3 months co-creating a custom client dashboard that tracks attendance, packages, and personal notes—all in one place she actually enjoys using.",
+    relief: "At first: 'My mornings are mine again!' Now: 'I can focus on teaching instead of admin. My business feels organized for the first time in years. We're even exploring automated payment reminders next.'",
+    timeTaken: "From 3-hour fix to 3-month partnership",
+    toolsUsed: ["Initial: Zapier, Google Calendar", "Partnership: Custom Airtable base, Automation workflows, Client dashboard"],
     category: 'automation',
-    slug: 'yoga-booking-automation'
+    slug: 'yoga-studio-partnership'
   },
   {
     id: '3',
@@ -115,8 +115,8 @@ export const mockTimeSlots = [
 
 // Category display names
 export const categoryLabels: Record<string, string> = {
-  'quick-fix': 'Quick Fixes (2 hours or less)',
-  'half-day': 'Half-Day Solutions',
-  'automation': 'Automation Magic',
-  'data-clarity': 'Data Clarity'
+  'quick-fix': 'Quick Wins',
+  'half-day': 'Co-Created Solutions',
+  'automation': 'Workflow Innovation',
+  'data-clarity': 'Data Systems'
 };
