@@ -17,10 +17,13 @@ export default function Hero() {
           <Link href="/intake" className="btn-primary w-full sm:w-auto">
             {hero.ctaPrimary}
           </Link>
-          <Link href="/portfolio" className="btn-secondary w-full sm:w-auto">
+          <Link href="/schedule" className="btn-primary w-full sm:w-auto">
             {hero.ctaSecondary}
           </Link>
         </div>
+        <p className="text-sm text-neutral-500 mt-6">
+          Not sure which? <Link href="/portfolio" className="text-primary-600 hover:text-primary-700 font-medium">See past work</Link> or <Link href="/schedule" className="text-primary-600 hover:text-primary-700 font-medium">let's chat</Link>
+        </p>
       </div>
     </section>
   );
