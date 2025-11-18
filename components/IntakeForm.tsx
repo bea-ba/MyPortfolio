@@ -116,6 +116,56 @@ export default function IntakeForm() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-8">
+      {/* Section 0: Track Selection */}
+      <div className="card bg-primary-50 border-primary-200">
+        <h3 className="text-2xl font-bold text-neutral-900 mb-4">Which describes you best?</h3>
+        <p className="text-neutral-600 mb-6">
+          This helps me understand how to best support you. There's no wrong answer!
+        </p>
+
+        <div className="space-y-4">
+          {[
+            {
+              value: 'quick-clarity',
+              title: 'I need something specific fixed',
+              description: 'I have a bottleneck blocking me right now and need it resolved quickly'
+            },
+            {
+              value: 'co-creation',
+              title: 'I want to explore an idea together',
+              description: 'I have a vision or idea I would like to co-create with a technical thinking partner'
+            },
+            {
+              value: 'not-sure',
+              title: "Not sure yet - let's chat",
+              description: "I'm still figuring out what I need and would like to explore options together"
+            }
+          ].map((option) => (
+            <label
+              key={option.value}
+              className={`flex items-start space-x-4 p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                formData.track === option.value
+                  ? 'border-primary-600 bg-primary-100'
+                  : 'border-neutral-300 bg-white hover:border-primary-400'
+              }`}
+            >
+              <input
+                type="radio"
+                name="track"
+                value={option.value}
+                checked={formData.track === option.value}
+                onChange={handleChange}
+                className="mt-1 w-5 h-5 text-primary-600 focus:ring-primary-500"
+              />
+              <div className="flex-1">
+                <p className="font-semibold text-neutral-900 mb-1">{option.title}</p>
+                <p className="text-sm text-neutral-600">{option.description}</p>
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+
       {/* Section 1: The Problem */}
       <div className="card">
         <h3 className="text-2xl font-bold text-neutral-900 mb-6">The Problem</h3>

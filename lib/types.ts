@@ -19,6 +19,9 @@ export type PortfolioCategory =
   | 'data-clarity';
 
 export interface IntakeFormData {
+  // Section 0: Track Selection
+  track?: 'quick-clarity' | 'co-creation' | 'not-sure';
+
   // Section 1: The Problem
   problemDescription: string;
   alreadyTried?: string;
