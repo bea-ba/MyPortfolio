@@ -396,6 +396,37 @@ export default function IntakeForm() {
           * Required fields
         </p>
       </div>
+
+      {/* FAQ Section */}
+      <div className="mt-12 pt-8 border-t border-neutral-200">
+        <h4 className="text-lg font-semibold text-neutral-900 mb-4">Common Questions</h4>
+
+        <div className="space-y-4 text-sm text-neutral-600">
+          <div>
+            <p className="font-medium text-neutral-800 mb-2">What does this typically cost?</p>
+            <p className="leading-relaxed">
+              I'm in my first year of independent practice, so my rates are lower than established consultants.
+              Most quick fixes fall under €300. For custom builds, it depends on scope—let's talk about what you need.
+            </p>
+          </div>
+
+          <div>
+            <p className="font-medium text-neutral-800 mb-2">Will your rates stay at this level?</p>
+            <p className="leading-relaxed">
+              I review my rates quarterly as I build experience. These rates reflect my current capacity through March 2026.
+            </p>
+          </div>
+
+          <div>
+            <p className="font-medium text-neutral-800 mb-2">Why are you transparent about being new to this?</p>
+            <p className="leading-relaxed">
+              Because I'd rather work with people who value honesty and growth over polished sales pitches.
+              You get lower rates and passionate problem-solving. I get real-world experience and the chance to build
+              something meaningful with you.
+            </p>
+          </div>
+        </div>
+      </div>
     </form>
   );
 }
