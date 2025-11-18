@@ -4,53 +4,93 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-MyPortfolio is a personal portfolio website project. This is a new repository that is currently being initialized.
+MyPortfolio is Bea's personal portfolio and service platform - a human-first web platform positioning Bea as a technical problem-solver for small businesses and passionate individuals. Built as a functional MVP prototype focusing on UI, screens, navigation, and mock interactions.
+
+**Core Value Proposition:** "I make your tech problems disappear. Simply."
 
 ## Development Setup
 
-*To be added once the tech stack is established*
-
 ### Prerequisites
-- TBD (e.g., Node.js version, package manager)
+- **Node.js** 18.0 or higher
+- **npm** or **yarn** package manager
 
 ### Installation
 ```bash
-# To be added
+npm install
+# or
+yarn install
 ```
 
 ### Development Commands
 ```bash
 # Start development server
-# TBD
+npm run dev
 
 # Build for production
-# TBD
+npm run build
 
-# Run tests
-# TBD
+# Start production server
+npm start
 
-# Lint code
-# TBD
+# Run linter
+npm run lint
 ```
+
+The development server runs on `http://localhost:3000`
 
 ## Architecture
 
-*To be documented as the project structure is established*
-
 ### Tech Stack
-- Frontend: TBD (e.g., React, Vue, Next.js, vanilla JS/HTML/CSS)
-- Styling: TBD (e.g., CSS Modules, Tailwind, Styled Components)
-- Build Tools: TBD (e.g., Vite, Webpack, Parcel)
-- Deployment: TBD (e.g., Vercel, Netlify, GitHub Pages)
+- **Frontend**: Next.js 14 (App Router), React 18, TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Build Tools**: Next.js (built-in Webpack/Turbopack)
+- **Deployment**: Vercel (recommended), Netlify, or AWS Amplify
 
 ### Project Structure
 ```
-To be established
+app/                    # Next.js App Router pages
+  ├── page.tsx         # Homepage
+  ├── intake/          # Intake form
+  ├── portfolio/       # Portfolio with filters
+  ├── schedule/        # Coffee chat scheduler
+  ├── about/           # About/Approach
+  └── logs/            # Learning logs (blog)
+
+components/            # Reusable React components
+  ├── Navigation.tsx
+  ├── Footer.tsx
+  ├── Hero.tsx
+  └── [other components]
+
+data/                  # Mock data and site content
+  ├── portfolioItems.ts
+  └── siteContent.ts
+
+lib/                   # Utilities and types
+  ├── types.ts
+  └── utils.ts
 ```
 
 ## Key Conventions
 
-*To be added as coding standards are established*
+### Code Style
+- **TypeScript** for type safety
+- **Functional components** with hooks
+- **Tailwind classes** for styling (avoid inline styles)
+- **"use client"** directive for client components only when needed
+- Mock data clearly separated in `/data` folder
+
+### Component Patterns
+- Extract reusable UI into `/components`
+- Keep pages in `/app` focused and simple
+- Use TypeScript types from `/lib/types.ts`
+- Validation and utilities in `/lib/utils.ts`
+
+### Naming Conventions
+- Components: PascalCase (e.g., `PortfolioCard.tsx`)
+- Files: kebab-case for pages, PascalCase for components
+- Types: PascalCase interfaces (e.g., `PortfolioItem`)
+- Mock data: camelCase exports (e.g., `portfolioItems`)
 
 ## Notes for Claude Code
 
