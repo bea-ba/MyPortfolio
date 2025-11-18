@@ -10,10 +10,10 @@ export const siteContent = {
 
   // Homepage Hero Section
   hero: {
-    headline: "Let's unstuck what's blocking you — or build what you're imagining",
-    subheadline: "I help passionate people and small businesses solve technical bottlenecks and co-create innovative solutions. Whether you need something fixed today or want to explore an idea together, let's start where you are.",
-    ctaPrimary: "I need something fixed",
-    ctaSecondary: "I want to explore an idea"
+    headline: "Let's fix what's stuck — or build what you're imagining",
+    subheadline: "I help passionate people and small businesses solve technical bottlenecks and build solutions that fit your world. Whether you need something fixed today or want to explore an idea together, let's start where you are.",
+    ctaPrimary: "Let's Talk",
+    ctaSecondary: ""
   },
 
   // Trust Signals
@@ -30,11 +30,11 @@ export const siteContent = {
   // Two Ways to Work Together
   twoWaysToWork: {
     title: "Two Ways to Work Together",
-    subtitle: "I'm at my best when co-creating with someone who has a vision. But I also know trust takes time. Start where you are, and we'll figure out where to go together.",
+    subtitle: "I'm at my best when building with someone who has a vision. But I also know trust takes time. Start where you are, and we'll figure out where to go together.",
     tracks: [
       {
         name: "Quick Clarity",
-        subtitle: "Unstuck a specific bottleneck",
+        subtitle: "Fix a specific bottleneck",
         description: "You have something blocking you RIGHT NOW. Let's fix it so you can get back to what you love.",
         ideal: "You know exactly what's stuck and need it resolved quickly",
         examples: [
@@ -43,22 +43,31 @@ export const siteContent = {
           "Tool connection that should just work"
         ],
         process: "Share what's stuck → I propose a solution → Usually done within a week",
-        pricing: "€250-500 depending on complexity",
+        outcomes: [
+          "Problem solved within a week",
+          "Clear documentation of what was done",
+          "Confidence it won't break again"
+        ],
         cta: "Get Unstuck",
         link: "/intake"
       },
       {
         name: "Let's Build Together",
-        subtitle: "Co-create something innovative",
-        description: "You have an idea, a vision, or something you want to simplify. Let's explore it together over coffee and build something that fits your world.",
-        ideal: "You're excited about a possibility and want a thinking partner",
+        subtitle: "Build something that fits your world",
+        description: "You have an idea, a vision, or something you want to simplify. Let's explore it together over coffee and build something designed for your exact needs.",
+        ideal: "You're excited about a possibility and want someone who gets both tech and your vision",
         examples: [
           "Custom tool built from scratch",
           "Workflow redesigned for your unique needs",
           "Technical idea explored and prototyped"
         ],
-        process: "Coffee chat → Explore vision → Co-create solution → Ongoing partnership",
-        pricing: "Depends on scope — typically €1500-4000 per project or €500-1000/month retainer",
+        process: "Coffee chat → Explore vision → Build solution together → Ongoing partnership",
+        outcomes: [
+          "Custom solution designed for your exact needs",
+          "Ongoing support as your vision evolves",
+          "A technical partner who's invested in your success"
+        ],
+        pricingNote: "Pricing depends on scope—let's talk about what you need",
         cta: "Let's Explore",
         link: "/schedule"
       }

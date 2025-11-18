@@ -82,15 +82,39 @@ export default function TwoWaysToWork() {
                 </p>
               </div>
 
-              {/* Pricing */}
-              <div className="mb-6 p-4 bg-neutral-50 rounded-lg border border-neutral-200">
-                <p className="text-sm font-semibold text-neutral-700 mb-1">
-                  Investment:
+              {/* Outcomes */}
+              <div className="mb-6">
+                <p className="text-sm font-semibold text-neutral-700 mb-3">
+                  What You Get:
                 </p>
-                <p className="text-sm text-neutral-600">
-                  {track.pricing}
-                </p>
+                <ul className="space-y-2">
+                  {track.outcomes.map((outcome: string, i: number) => (
+                    <li key={i} className="flex items-start space-x-2">
+                      <svg
+                        className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm text-neutral-700">{outcome}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+
+              {/* Pricing Note (if exists) */}
+              {track.pricingNote && (
+                <div className="mb-6 p-4 bg-neutral-50 rounded-lg border border-neutral-200">
+                  <p className="text-sm text-neutral-600">
+                    {track.pricingNote}
+                  </p>
+                </div>
+              )}
 
               {/* CTA */}
               <Link

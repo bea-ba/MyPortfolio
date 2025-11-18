@@ -133,7 +133,7 @@ export default function IntakeForm() {
             {
               value: 'co-creation',
               title: 'I want to explore an idea together',
-              description: 'I have a vision or idea I would like to co-create with a technical thinking partner'
+              description: 'I have a vision or idea and want someone who gets both tech and my vision'
             },
             {
               value: 'not-sure',

@@ -16,11 +16,11 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: '2',
     clientType: "Sofia's Yoga Studio",
-    problem: "Started with: Manually copying bookings took 2 hours every morning. Later discovered: Her whole client management system was held together by spreadsheets and memory.",
-    solution: "First: Automated the booking-to-calendar sync (3 hours). Then: Over coffee, Sofia shared her bigger vision. We spent 3 months co-creating a custom client dashboard that tracks attendance, packages, and personal notes—all in one place she actually enjoys using.",
-    relief: "At first: 'My mornings are mine again!' Now: 'I can focus on teaching instead of admin. My business feels organized for the first time in years. We're even exploring automated payment reminders next.'",
+    problem: "Sofia was spending 2 hours every morning copying class bookings from her website into Google Calendar. It was driving her crazy.",
+    solution: "We fixed that in 3 hours—automated the sync so bookings just appeared on her calendar. But during our coffee chat afterward, Sofia mentioned something bigger: her entire client management was held together with spreadsheets and memory. She had this vision of a system where everything lived in one place. So we built it. Over 3 months, we created a custom client dashboard that tracks attendance, packages, and personal notes.",
+    relief: "I can focus on teaching instead of admin. My business feels organized for the first time in years. We're currently exploring automated payment reminders together.",
     timeTaken: "From 3-hour fix to 3-month partnership",
-    toolsUsed: ["Initial: Zapier, Google Calendar", "Partnership: Custom Airtable base, Automation workflows, Client dashboard"],
+    toolsUsed: ["Started with: Zapier, Google Calendar", "Built together: Custom Airtable base, Automation workflows, Client dashboard"],
     category: 'automation',
     slug: 'yoga-studio-partnership'
   },
