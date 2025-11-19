@@ -2,8 +2,9 @@
 
 import { useState, useCallback } from 'react';
 import { IntakeFormData } from '@/lib/types';
-import { isValidEmail, submitForm } from '@/lib/utils';
+import { isValidEmail } from '@/lib/utils';
 import { siteContent } from '@/data/siteContent';
+import { trackFormSubmission, trackError } from '@/lib/analytics';
 
 export default function IntakeForm() {
   const [formData, setFormData] = useState<Partial<IntakeFormData>>({
@@ -71,15 +72,28 @@ export default function IntakeForm() {
     setIsSubmitting(true);
 
     try {
-      // Mock API call - replace with actual integration
-      const result = await submitForm(formData);
+      const response = await fetch('/api/intake', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
 
       if (result.success) {
         setIsSubmitted(true);
+        trackFormSubmission('intake', true);
+      } else {
+        setErrors({ submit: result.message || 'Something went wrong. Please try again.' });
+        trackFormSubmission('intake', false);
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      setErrors({ submit: 'Something went wrong. Please try again.' });
+      setErrors({ submit: 'Something went wrong. Please try again or email hello@bea.dev directly.' });
+      trackError('form_submission', 'Intake form submission failed', error instanceof Error ? error.message : 'Unknown error');
+      trackFormSubmission('intake', false);
     } finally {
       setIsSubmitting(false);
     }
@@ -90,8 +104,14 @@ export default function IntakeForm() {
     setIsSubmitting(true);
 
     try {
-      // Submit additional details
-      await submitForm({ ...formData, additionalDetails: true });
+      // Submit additional details - could send to same endpoint with flag
+      await fetch('/api/intake', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, additionalDetails: true }),
+      });
       setShowOptionalFields(false);
       // Could show a mini success message here
     } catch (error) {

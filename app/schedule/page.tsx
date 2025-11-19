@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { CoffeeChat } from '@/lib/types';
-import { isValidEmail, submitForm } from '@/lib/utils';
+import { isValidEmail } from '@/lib/utils';
 import { siteContent } from '@/data/siteContent';
 import { mockTimeSlots } from '@/data/portfolioItems';
 import TestimonialQuote from '@/components/TestimonialQuote';
+import { trackFormSubmission, trackError } from '@/lib/analytics';
 
 export default function SchedulePage() {
   const [formData, setFormData] = useState<Partial<CoffeeChat>>({});
@@ -59,15 +60,28 @@ export default function SchedulePage() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace with actual scheduling integration (Calendly, Cal.com, etc.)
-      const result = await submitForm(formData);
+      const response = await fetch('/api/schedule', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
 
       if (result.success) {
         setIsSubmitted(true);
+        trackFormSubmission('schedule', true);
+      } else {
+        setErrors({ submit: result.message || 'Something went wrong. Please try again.' });
+        trackFormSubmission('schedule', false);
       }
     } catch (error) {
       console.error('Scheduling error:', error);
-      setErrors({ submit: 'Something went wrong. Please try again.' });
+      setErrors({ submit: 'Something went wrong. Please try again or email hello@bea.dev directly.' });
+      trackError('form_submission', 'Schedule form submission failed', error instanceof Error ? error.message : 'Unknown error');
+      trackFormSubmission('schedule', false);
     } finally {
       setIsSubmitting(false);
     }
@@ -78,7 +92,13 @@ export default function SchedulePage() {
     setIsSubmitting(true);
 
     try {
-      await submitForm({ ...formData, prepDetails: true });
+      await fetch('/api/schedule', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, prepDetails: true }),
+      });
       setShowOptionalPrep(false);
     } catch (error) {
       console.error('Prep details error:', error);

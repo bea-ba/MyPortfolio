@@ -40,16 +40,25 @@ export default function PrivacyPage() {
 
             <h3 className="text-xl font-semibold text-neutral-900 mb-3 mt-6">Information Automatically Collected</h3>
             <p className="text-neutral-700 leading-relaxed mb-4">
-              This website currently does NOT use:
+              <strong>Privacy-First Analytics:</strong> This website uses Vercel Analytics and Speed Insights to understand how visitors use the site and to improve performance. These tools are:
             </p>
             <ul className="list-disc pl-6 mb-4 text-neutral-700 space-y-2">
-              <li>Cookies for tracking</li>
-              <li>Analytics tools (no Google Analytics, no third-party tracking)</li>
+              <li><strong>Privacy-focused:</strong> No cookies are used</li>
+              <li><strong>GDPR compliant:</strong> No personal data is collected</li>
+              <li><strong>Anonymous:</strong> Visitors are not tracked across websites</li>
+              <li><strong>Minimal:</strong> Only aggregated page views and performance metrics</li>
+            </ul>
+            <p className="text-neutral-700 leading-relaxed mb-4">
+              This website does NOT use:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-neutral-700 space-y-2">
+              <li>Tracking cookies or persistent identifiers</li>
+              <li>Google Analytics or similar third-party tracking</li>
               <li>Social media pixels</li>
-              <li>Advertising networks</li>
+              <li>Advertising networks or retargeting</li>
             </ul>
             <p className="text-neutral-700 leading-relaxed">
-              Your web browser may send standard technical information (IP address, browser type) to the web hosting service, but I do not collect or analyze this data.
+              Your web browser may send standard technical information (IP address, browser type) to the web hosting service. Vercel Analytics processes page views in an anonymized way without storing IP addresses or personal identifiers.
             </p>
           </section>
 
@@ -84,14 +93,15 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-neutral-900 mb-4">Third-Party Services</h2>
             <p className="text-neutral-700 leading-relaxed mb-4">
-              This website uses:
+              This website uses the following third-party services:
             </p>
             <ul className="list-disc pl-6 mb-4 text-neutral-700 space-y-2">
               <li><strong>Google Fonts:</strong> Font files are loaded from Google's servers. Google's <a href="https://policies.google.com/privacy" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a> applies.</li>
-              <li><strong>Web Hosting:</strong> The site is hosted on a web hosting service. Your IP address and basic technical information may be logged by the hosting provider.</li>
+              <li><strong>Vercel (Hosting & Analytics):</strong> The site is hosted on Vercel. Vercel Analytics and Speed Insights collect anonymized usage data without cookies or personal identifiers. Read Vercel's <a href="https://vercel.com/legal/privacy-policy" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
+              <li><strong>Resend (Email Service):</strong> Form submissions are sent via Resend's email service. Your email and form data are transmitted securely and used only to respond to your inquiry. Read Resend's <a href="https://resend.com/legal/privacy-policy" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
             </ul>
             <p className="text-neutral-700 leading-relaxed">
-              Before launch, I will integrate with a scheduling or email service for form submissions. I will update this policy to reflect any new third-party services.
+              All third-party services used on this website are GDPR-compliant and respect user privacy. I will update this policy if any new services are added.
             </p>
           </section>
 
