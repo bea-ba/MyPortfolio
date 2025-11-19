@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { IntakeFormData } from '@/lib/types';
 import { isValidEmail, submitForm } from '@/lib/utils';
 import { siteContent } from '@/data/siteContent';
@@ -14,18 +14,23 @@ export default function IntakeForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showOptionalFields, setShowOptionalFields] = useState(false);
 
-  const handleChange = (
+  const handleChange = useCallback((
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: '' }));
-    }
-  };
+    setErrors((prev) => {
+      if (prev[name]) {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      }
+      return prev;
+    });
+  }, []);
 
-  const handleCheckboxChange = (value: string) => {
+  const handleCheckboxChange = useCallback((value: string) => {
     setFormData((prev) => {
       const priorities = prev.priorities || [];
       const newPriorities = priorities.includes(value)
@@ -35,7 +40,7 @@ export default function IntakeForm() {
         : priorities;
       return { ...prev, priorities: newPriorities };
     });
-  };
+  }, []);
 
   const validateForm = (): boolean => {
     const newErrors: Record<string, string> = {};

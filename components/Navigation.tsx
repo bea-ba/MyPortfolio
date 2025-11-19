@@ -1,17 +1,25 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/about', label: 'About' },
+  { href: '/logs', label: 'Learning Logs' },
+];
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/portfolio', label: 'Portfolio' },
-    { href: '/about', label: 'About' },
-    { href: '/logs', label: 'Learning Logs' },
-  ];
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
 
   return (
     <nav className="bg-white border-b border-neutral-200 sticky top-0 z-50">
@@ -43,7 +51,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
             className="md:hidden p-2 text-neutral-700 hover:text-primary-600"
             aria-label="Toggle menu"
           >
@@ -74,7 +82,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className="block py-2 text-neutral-700 hover:text-primary-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 {link.label}
               </Link>
@@ -82,7 +90,7 @@ export default function Navigation() {
             <Link
               href="/schedule"
               className="block mt-4 px-6 py-2 bg-primary-600 text-white rounded-lg font-medium text-center hover:bg-primary-700 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Let's Talk
             </Link>

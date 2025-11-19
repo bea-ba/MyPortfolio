@@ -1,24 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { portfolioItems, categoryLabels } from '@/data/portfolioItems';
 import PortfolioCard from '@/components/PortfolioCard';
 import { PortfolioCategory } from '@/lib/types';
 import { filterPortfolioByCategory } from '@/lib/utils';
 
+const categories: Array<{ value: PortfolioCategory | 'all'; label: string }> = [
+  { value: 'all', label: 'All Projects' },
+  { value: 'quick-fix', label: categoryLabels['quick-fix'] },
+  { value: 'half-day', label: categoryLabels['half-day'] },
+  { value: 'automation', label: categoryLabels['automation'] },
+  { value: 'data-clarity', label: categoryLabels['data-clarity'] },
+];
+
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState<PortfolioCategory | 'all'>('all');
 
-  const filteredItems = filterPortfolioByCategory(portfolioItems, selectedCategory);
-
-  const categories: Array<{ value: PortfolioCategory | 'all'; label: string }> = [
-    { value: 'all', label: 'All Projects' },
-    { value: 'quick-fix', label: categoryLabels['quick-fix'] },
-    { value: 'half-day', label: categoryLabels['half-day'] },
-    { value: 'automation', label: categoryLabels['automation'] },
-    { value: 'data-clarity', label: categoryLabels['data-clarity'] },
-  ];
+  const filteredItems = useMemo(
+    () => filterPortfolioByCategory(portfolioItems, selectedCategory),
+    [selectedCategory]
+  );
 
   return (
     <div className="section-container">

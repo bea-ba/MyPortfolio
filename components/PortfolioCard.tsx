@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Link from 'next/link';
 import { PortfolioItem } from '@/lib/types';
 import { getCategoryColor } from '@/lib/utils';
@@ -7,7 +8,7 @@ interface PortfolioCardProps {
   showFullDetails?: boolean;
 }
 
-export default function PortfolioCard({ item, showFullDetails = false }: PortfolioCardProps) {
+function PortfolioCard({ item, showFullDetails = false }: PortfolioCardProps) {
   return (
     <div className="card">
       {/* Category Badge */}
@@ -105,3 +106,5 @@ export default function PortfolioCard({ item, showFullDetails = false }: Portfol
     </div>
   );
 }
+
+export default memo(PortfolioCard);

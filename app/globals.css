@@ -7,6 +7,19 @@
     @apply scroll-smooth;
   }
 
+  /* Respect user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     @apply bg-neutral-50 text-neutral-800;
   }
@@ -96,6 +109,7 @@
            shadow-[0_2px_8px_rgba(0,0,0,0.04)]
            hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]
            transition-shadow duration-300;
+    will-change: box-shadow;
   }
 
   /* Card Variants */
@@ -106,6 +120,7 @@
   .card-interactive {
     @apply hover:scale-[1.01] active:scale-[0.99]
            cursor-pointer transition-transform duration-200;
+    will-change: transform;
   }
 
   .card-accent {
@@ -148,18 +163,21 @@
   /* Micro-interactions */
   .animate-fade-in {
     animation: fadeIn 0.3s ease-in;
+    will-change: opacity;
   }
 
   .animate-slide-up {
     animation: slideUp 0.4s ease-out;
+    will-change: transform, opacity;
   }
 
   .animate-scale-in {
     animation: scaleIn 0.2s ease-out;
+    will-change: transform, opacity;
   }
 }
 
-/* Keyframe Animations */
+/* Keyframe Animations - GPU Accelerated */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -172,21 +190,21 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(10px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
   }
 }
 
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.95) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
 }
