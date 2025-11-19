@@ -393,6 +393,17 @@ export default function IntakeForm() {
         <p className="text-sm text-neutral-500 mt-4">
           * Required fields • I'll respond within 24 hours
         </p>
+        <p className="text-xs text-neutral-500 mt-3">
+          By submitting this form, you agree to my{' '}
+          <a href="/privacy" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+          </a>
+          {' '}and{' '}
+          <a href="/terms" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">
+            Terms of Service
+          </a>.
+          I will only use your information to respond to your inquiry.
+        </p>
       </div>
     </form>
   );

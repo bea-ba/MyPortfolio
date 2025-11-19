@@ -422,6 +422,17 @@ export default function SchedulePage() {
             <p className="text-sm text-neutral-500 mt-4">
               * Required fields
             </p>
+            <p className="text-xs text-neutral-500 mt-3">
+              By submitting this form, you agree to my{' '}
+              <a href="/privacy" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">
+                Privacy Policy
+              </a>
+              {' '}and{' '}
+              <a href="/terms" className="text-primary-600 hover:text-primary-700 underline" target="_blank" rel="noopener noreferrer">
+                Terms of Service
+              </a>.
+              I will only use your information to schedule our chat.
+            </p>
             <p className="text-sm text-neutral-600 mt-3">
               Prefer to write instead of talk? <a href="/intake" className="text-primary-600 hover:text-primary-700 font-medium underline">Fill out our form</a>
             </p>

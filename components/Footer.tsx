@@ -61,9 +61,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-neutral-700 pt-8 text-sm text-center md:text-left">
-          <p className="mb-2">{siteContent.footer.copyright}</p>
-          <p className="text-xs">{siteContent.footer.privacyText}</p>
+        <div className="border-t border-neutral-700 pt-8 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>{siteContent.footer.copyright}</p>
+            <div className="flex gap-6 text-xs">
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+          <p className="text-xs mt-4 text-center md:text-left">{siteContent.footer.privacyText}</p>
         </div>
       </div>
     </footer>
