@@ -1,5 +1,22 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { siteContent } from '@/data/siteContent';
+
+export const metadata: Metadata = {
+  title: 'About My Approach - How I Help Solve Tech Problems | Bea',
+  description: 'Learn how I work: focused solutions, clear boundaries, sustainable results. I help small businesses solve tech problems without getting overwhelmed.',
+  keywords: ['about', 'approach', 'work methodology', 'tech consultant approach', 'problem-solving methodology'],
+  openGraph: {
+    title: 'About My Approach | Bea',
+    description: 'Focused solutions, clear boundaries, sustainable results for small businesses.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About My Approach | Bea',
+    description: 'How I help solve tech problems without getting overwhelmed.',
+  },
+};
 
 export default function AboutPage() {
   const { about } = siteContent;
@@ -10,7 +27,7 @@ export default function AboutPage() {
         {/* Page Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-neutral-900 mb-4">
-            About My Approach
+            My Problem-Solving Approach for Small Businesses
           </h1>
           <p className="text-xl text-neutral-600 leading-relaxed">
             Technology should work for you, not the other way around.
@@ -45,6 +62,7 @@ export default function AboutPage() {
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  aria-hidden="true"
                 >
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -71,6 +89,7 @@ export default function AboutPage() {
                     strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                  aria-hidden="true"
                   >
                     <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -101,6 +120,7 @@ export default function AboutPage() {
                     strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                  aria-hidden="true"
                   >
                     <path d="M6 18L18 6M6 6l12 12" />
                   </svg>
@@ -117,8 +137,15 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-neutral-900 mb-6">
               {about.background.title}
             </h2>
-            <p className="text-lg text-neutral-700 leading-relaxed">
+            <p className="text-lg text-neutral-700 leading-relaxed mb-4">
               {about.background.content}
+            </p>
+            <p className="text-lg text-neutral-700">
+              Want to see examples of how I've helped others?{' '}
+              <Link href="/portfolio" className="text-primary-600 hover:text-primary-700 font-medium underline">
+                Check out my portfolio of real solutions
+              </Link>
+              .
             </p>
           </div>
         </section>

@@ -100,6 +100,7 @@ export default function SchedulePage() {
               strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -207,6 +208,9 @@ export default function SchedulePage() {
           <h1 className="text-4xl font-bold text-neutral-900 mb-4">
             Let's Have a Coffee Chat
           </h1>
+          <p className="text-lg text-neutral-500 mb-2">
+            Free 30-Minute Tech Consultation
+          </p>
           <p className="text-xl text-neutral-600 leading-relaxed">
             {siteContent.forms.coffeeFormIntro}
           </p>
@@ -223,6 +227,7 @@ export default function SchedulePage() {
               strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -239,6 +244,7 @@ export default function SchedulePage() {
               strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -255,6 +261,7 @@ export default function SchedulePage() {
               strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>

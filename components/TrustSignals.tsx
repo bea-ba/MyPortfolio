@@ -22,7 +22,7 @@ export default function TrustSignals() {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="currentColor" aria-hidden="true"
               >
                 <path d="M5 13l4 4L19 7" />
               </svg>

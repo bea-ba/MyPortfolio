@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { blogPosts } from '@/data/portfolioItems';
 import { BlogPost } from '@/lib/types';
 import { formatDate } from '@/lib/utils';
@@ -37,7 +38,7 @@ export default function LogsPage() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-neutral-900 mb-4">
-            Learning Logs
+            Learning Logs: Solutions, Discoveries & Wins
           </h1>
           <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
             Short notes on problems solved, tools discovered, boundaries set, and wins celebrated.
@@ -115,10 +116,21 @@ export default function LogsPage() {
           <h3 className="text-xl font-bold text-neutral-900 mb-3">
             Why Learning Logs?
           </h3>
-          <p className="text-neutral-700 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-neutral-700 leading-relaxed max-w-2xl mx-auto mb-4">
             These quick posts help me reflect on what I'm learning, celebrate wins, and maintain
             boundaries. If you find something useful here, that's a bonus. Mostly, they keep me
             honest about sustainable growth.
+          </p>
+          <p className="text-neutral-700">
+            Want to see how I apply these learnings to help others?{' '}
+            <Link href="/portfolio" className="text-primary-600 hover:text-primary-700 font-medium underline">
+              Check out my portfolio
+            </Link>
+            {' '}or{' '}
+            <Link href="/about" className="text-primary-600 hover:text-primary-700 font-medium underline">
+              learn more about my approach
+            </Link>
+            .
           </p>
         </div>
       </div>

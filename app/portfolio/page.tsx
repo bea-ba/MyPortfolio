@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { portfolioItems, categoryLabels } from '@/data/portfolioItems';
 import PortfolioCard from '@/components/PortfolioCard';
 import { PortfolioCategory } from '@/lib/types';
@@ -25,10 +26,10 @@ export default function PortfolioPage() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-neutral-900 mb-4">
-            Simple Solutions to Real Problems
+            Real Tech Solutions for Small Businesses
           </h1>
           <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
-            See how I've helped small businesses and passionate people solve their tech headaches.
+            See how I've helped small businesses and passionate people solve their tech headaches with automation, quick fixes, and custom tools.
             Every project kept simple, focused, and within scope.
           </p>
         </div>
@@ -76,7 +77,11 @@ export default function PortfolioPage() {
             Ready to Solve Your Tech Problem?
           </h2>
           <p className="text-lg text-neutral-700 mb-6 max-w-2xl mx-auto">
-            Let's have a quick coffee chat to see how I can help.
+            Let's have a quick coffee chat to see how I can help. Want to know more about{' '}
+            <Link href="/about" className="text-primary-600 hover:text-primary-700 font-medium underline">
+              how I work and my approach
+            </Link>
+            ?
           </p>
           <div className="flex flex-col items-center gap-3">
             <a href="/schedule" className="btn-primary text-lg px-12 py-4">
