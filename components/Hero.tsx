@@ -6,11 +6,11 @@ export default function Hero() {
 
   return (
     <section className="section-container text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
+      <div className="max-w-4xl mx-auto animate-fade-in">
+        <h1 className="text-neutral-900 mb-8">
           {hero.headline}
         </h1>
-        <p className="text-xl md:text-2xl text-neutral-600 mb-12 leading-relaxed">
+        <p className="text-neutral-600 mb-12">
           {hero.subheadline}
         </p>
         <div className="flex flex-col items-center">

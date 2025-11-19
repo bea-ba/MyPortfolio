@@ -91,9 +91,9 @@ export default function SchedulePage() {
     return (
       <div className="section-container">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center mb-8">
+          <div className="bg-success-50 border border-success-100 rounded-lg p-8 text-center mb-8">
             <svg
-              className="w-16 h-16 text-green-600 mx-auto mb-4"
+              className="w-16 h-16 text-success-600 mx-auto mb-4"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -286,13 +286,13 @@ export default function SchedulePage() {
                   type="text"
                   id="name"
                   name="name"
-                  className={`input-field ${errors.name ? 'border-red-500' : ''}`}
+                  className={`input-field ${errors.name ? 'border-error-500' : ''}`}
                   value={formData.name || ''}
                   onChange={handleChange}
                   placeholder="Your name"
                 />
                 {errors.name && (
-                  <p className="text-red-600 text-sm mt-1">{errors.name}</p>
+                  <p className="text-error-600 text-sm mt-1">{errors.name}</p>
                 )}
               </div>
 
@@ -305,13 +305,13 @@ export default function SchedulePage() {
                   type="email"
                   id="email"
                   name="email"
-                  className={`input-field ${errors.email ? 'border-red-500' : ''}`}
+                  className={`input-field ${errors.email ? 'border-error-500' : ''}`}
                   value={formData.email || ''}
                   onChange={handleChange}
                   placeholder="your.email@example.com"
                 />
                 {errors.email && (
-                  <p className="text-red-600 text-sm mt-1">{errors.email}</p>
+                  <p className="text-error-600 text-sm mt-1">{errors.email}</p>
                 )}
               </div>
 
@@ -324,13 +324,13 @@ export default function SchedulePage() {
                   type="text"
                   id="stuckOn"
                   name="stuckOn"
-                  className={`input-field ${errors.stuckOn ? 'border-red-500' : ''}`}
+                  className={`input-field ${errors.stuckOn ? 'border-error-500' : ''}`}
                   value={formData.stuckOn || ''}
                   onChange={handleChange}
                   placeholder="One sentence is fine—we'll dig deeper during our chat"
                 />
                 {errors.stuckOn && (
-                  <p className="text-red-600 text-sm mt-1">{errors.stuckOn}</p>
+                  <p className="text-error-600 text-sm mt-1">{errors.stuckOn}</p>
                 )}
                 <p className="text-sm text-neutral-500 mt-2">
                   e.g., "Automating my booking process" or "Exploring a custom tool idea"
@@ -346,7 +346,7 @@ export default function SchedulePage() {
                   <select
                     id="preferredDate"
                     name="preferredDate"
-                    className={`input-field ${errors.preferredDate ? 'border-red-500' : ''}`}
+                    className={`input-field ${errors.preferredDate ? 'border-error-500' : ''}`}
                     value={formData.preferredDate || ''}
                     onChange={handleChange}
                   >
@@ -358,7 +358,7 @@ export default function SchedulePage() {
                     ))}
                   </select>
                   {errors.preferredDate && (
-                    <p className="text-red-600 text-sm mt-1">{errors.preferredDate}</p>
+                    <p className="text-error-600 text-sm mt-1">{errors.preferredDate}</p>
                   )}
                 </div>
 
@@ -369,7 +369,7 @@ export default function SchedulePage() {
                   <select
                     id="preferredTime"
                     name="preferredTime"
-                    className={`input-field ${errors.preferredTime ? 'border-red-500' : ''}`}
+                    className={`input-field ${errors.preferredTime ? 'border-error-500' : ''}`}
                     value={formData.preferredTime || ''}
                     onChange={handleChange}
                     disabled={!formData.preferredDate}
@@ -384,12 +384,12 @@ export default function SchedulePage() {
                       ))}
                   </select>
                   {errors.preferredTime && (
-                    <p className="text-red-600 text-sm mt-1">{errors.preferredTime}</p>
+                    <p className="text-error-600 text-sm mt-1">{errors.preferredTime}</p>
                   )}
                 </div>
               </div>
 
-              <div className="p-4 bg-blue-50 rounded-lg">
+              <div className="p-4 bg-info-50 rounded-lg">
                 <p className="text-sm text-neutral-700">
                   <strong>Note:</strong> All times are in Lisbon timezone (WET/WEST). You'll receive a calendar invite with video link.
                 </p>
@@ -399,7 +399,7 @@ export default function SchedulePage() {
 
           {/* Submit */}
           {errors.submit && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+            <div className="bg-error-50 border border-error-100 rounded-lg p-4 text-error-700">
               {errors.submit}
             </div>
           )}

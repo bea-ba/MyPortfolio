@@ -18,7 +18,7 @@ export default function TwoWaysToWork() {
         </div>
 
         {/* Progressive Path Guidance */}
-        <div className="mb-8 p-6 bg-blue-50 border border-blue-100 rounded-lg max-w-3xl mx-auto">
+        <div className="mb-8 p-6 bg-info-50 border border-info-100 rounded-lg max-w-3xl mx-auto">
           <p className="text-neutral-700 text-center leading-relaxed">
             <span className="font-semibold">Not sure which fits?</span> Start with Quick Clarity.
             Many of my best partnerships began with a small fix, then grew into something bigger once we built trust together.
@@ -46,7 +46,7 @@ export default function TwoWaysToWork() {
               </div>
 
               {/* Ideal For */}
-              <div className="mb-6 p-4 bg-blue-50 rounded-lg">
+              <div className="mb-6 p-4 bg-info-50 rounded-lg">
                 <p className="text-sm font-semibold text-neutral-700 mb-1">
                   Ideal if:
                 </p>
@@ -99,7 +99,7 @@ export default function TwoWaysToWork() {
                   {track.outcomes.map((outcome: string, i: number) => (
                     <li key={i} className="flex items-start space-x-2">
                       <svg
-                        className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-success-600 flex-shrink-0 mt-0.5"
                         fill="none"
                         strokeLinecap="round"
                         strokeLinejoin="round"

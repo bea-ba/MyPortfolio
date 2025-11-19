@@ -23,7 +23,7 @@ export default function LogsPage() {
 
   const getCategoryBadge = (category: BlogPost['category']) => {
     const badges = {
-      solution: 'bg-blue-100 text-blue-800',
+      solution: 'bg-info-100 text-blue-800',
       discovery: 'bg-green-100 text-green-800',
       reflection: 'bg-purple-100 text-purple-800',
       win: 'bg-orange-100 text-orange-800',

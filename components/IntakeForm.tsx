@@ -99,9 +99,9 @@ export default function IntakeForm() {
   if (isSubmitted) {
     return (
       <div className="max-w-3xl mx-auto py-12">
-        <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center mb-8">
+        <div className="bg-success-50 border border-success-100 rounded-lg p-8 text-center mb-8">
           <svg
-            className="w-16 h-16 text-green-600 mx-auto mb-4"
+            className="w-16 h-16 text-success-600 mx-auto mb-4"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -317,13 +317,13 @@ export default function IntakeForm() {
               type="text"
               id="name"
               name="name"
-              className={`input-field ${errors.name ? 'border-red-500' : ''}`}
+              className={`input-field ${errors.name ? 'border-error-500' : ''}`}
               value={formData.name || ''}
               onChange={handleChange}
               placeholder="e.g., Maria Silva"
             />
             {errors.name && (
-              <p className="text-red-600 text-sm mt-1">{errors.name}</p>
+              <p className="text-error-600 text-sm mt-1">{errors.name}</p>
             )}
           </div>
 
@@ -336,13 +336,13 @@ export default function IntakeForm() {
               type="email"
               id="email"
               name="email"
-              className={`input-field ${errors.email ? 'border-red-500' : ''}`}
+              className={`input-field ${errors.email ? 'border-error-500' : ''}`}
               value={formData.email || ''}
               onChange={handleChange}
               placeholder="maria@example.com"
             />
             {errors.email && (
-              <p className="text-red-600 text-sm mt-1">{errors.email}</p>
+              <p className="text-error-600 text-sm mt-1">{errors.email}</p>
             )}
           </div>
 
@@ -355,13 +355,13 @@ export default function IntakeForm() {
               id="problemDescription"
               name="problemDescription"
               rows={5}
-              className={`input-field ${errors.problemDescription ? 'border-red-500' : ''}`}
+              className={`input-field ${errors.problemDescription ? 'border-error-500' : ''}`}
               value={formData.problemDescription || ''}
               onChange={handleChange}
               placeholder="Describe your situation in 2-3 sentences. For example: 'I run a yoga studio and spend 2 hours every morning manually copying bookings into my calendar. I'd love to automate this.'"
             />
             {errors.problemDescription && (
-              <p className="text-red-600 text-sm mt-1">{errors.problemDescription}</p>
+              <p className="text-error-600 text-sm mt-1">{errors.problemDescription}</p>
             )}
             <p className="text-sm text-neutral-500 mt-2">
               Don't worry about getting it perfect—just give me enough to understand what you're facing.
@@ -372,7 +372,7 @@ export default function IntakeForm() {
 
       {/* Submit Button */}
       {errors.submit && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+        <div className="bg-error-50 border border-error-100 rounded-lg p-4 text-error-700">
           {errors.submit}
         </div>
       )}
