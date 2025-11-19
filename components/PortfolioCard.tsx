@@ -52,6 +52,27 @@ export default function PortfolioCard({ item, showFullDetails = false }: Portfol
         </p>
       </div>
 
+      {/* CTA */}
+      <div className="mt-6 pt-4 border-t border-neutral-200">
+        <Link
+          href="/schedule"
+          className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors group"
+        >
+          <span>Need something similar? Let's talk</span>
+          <svg
+            className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </div>
+
       {/* Tools Used (if full details) */}
       {showFullDetails && item.toolsUsed && (
         <div className="mt-4">

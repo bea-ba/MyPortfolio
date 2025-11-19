@@ -1,4 +1,5 @@
 import IntakeForm from '@/components/IntakeForm';
+import SimpleTrustStats from '@/components/SimpleTrustStats';
 import { siteContent } from '@/data/siteContent';
 
 export default function IntakePage() {
@@ -13,6 +14,11 @@ export default function IntakePage() {
           <p className="text-xl text-neutral-600 leading-relaxed">
             {siteContent.forms.intakeFormIntro}
           </p>
+        </div>
+
+        {/* Trust Signals */}
+        <div className="mb-12">
+          <SimpleTrustStats />
         </div>
 
         {/* Form */}

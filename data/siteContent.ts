@@ -48,8 +48,8 @@ export const siteContent = {
           "Clear documentation of what was done",
           "Confidence it won't break again"
         ],
-        cta: "Get Unstuck",
-        link: "/intake"
+        cta: "Let's Talk",
+        link: "/schedule"
       },
       {
         name: "Let's Build Together",

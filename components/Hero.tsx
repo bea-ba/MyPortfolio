@@ -14,7 +14,7 @@ export default function Hero() {
           {hero.subheadline}
         </p>
         <div className="flex flex-col items-center">
-          <Link href="/schedule" className="btn-primary text-lg px-12 py-5 w-full sm:w-auto">
+          <Link href="/schedule" className="btn-primary text-lg px-12 py-5 w-full max-w-sm sm:w-auto">
             {hero.ctaPrimary}
           </Link>
           <p className="text-sm text-neutral-500 mt-6">

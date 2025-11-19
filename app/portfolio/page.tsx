@@ -76,15 +76,15 @@ export default function PortfolioPage() {
             Ready to Solve Your Tech Problem?
           </h2>
           <p className="text-lg text-neutral-700 mb-6 max-w-2xl mx-auto">
-            Most projects are done within a week. Let's see if I can help.
+            Let's have a quick coffee chat to see how I can help.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/intake" className="btn-primary">
-              Tell Me Your Problem
+          <div className="flex flex-col items-center gap-3">
+            <a href="/schedule" className="btn-primary text-lg px-12 py-4">
+              Book Free Coffee Chat
             </a>
-            <a href="/schedule" className="btn-secondary">
-              Schedule a Chat
-            </a>
+            <p className="text-sm text-neutral-600">
+              Prefer to write? <a href="/intake" className="text-primary-600 hover:text-primary-700 font-medium underline">Fill out our form instead</a>
+            </p>
           </div>
         </div>
       </div>

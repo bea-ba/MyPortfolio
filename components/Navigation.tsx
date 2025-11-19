@@ -34,10 +34,10 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/intake"
+              href="/schedule"
               className="px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
             >
-              Get Help
+              Let's Talk
             </Link>
           </div>
 
@@ -79,11 +79,11 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/intake"
+              href="/schedule"
               className="block mt-4 px-6 py-2 bg-primary-600 text-white rounded-lg font-medium text-center hover:bg-primary-700 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Get Help
+              Let's Talk
             </Link>
           </div>
         )}

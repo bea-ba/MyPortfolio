@@ -17,6 +17,14 @@ export default function TwoWaysToWork() {
           </p>
         </div>
 
+        {/* Progressive Path Guidance */}
+        <div className="mb-8 p-6 bg-blue-50 border border-blue-100 rounded-lg max-w-3xl mx-auto">
+          <p className="text-neutral-700 text-center leading-relaxed">
+            <span className="font-semibold">Not sure which fits?</span> Start with Quick Clarity.
+            Many of my best partnerships began with a small fix, then grew into something bigger once we built trust together.
+          </p>
+        </div>
+
         {/* Two Tracks */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {twoWaysToWork.tracks.map((track, index) => (
